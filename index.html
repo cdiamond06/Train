@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="UTF-8">
+		<title>Moment JS Exercises</title>
+		<!-- Firebase Reference -->
+		<script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+		<!-- jQuery -->
+		<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+		<!-- moment.js -->
+		<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<!-- CSS link -->
+		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	</head>
+	<body>
+		
+		<div class = "container">
+			<br>
+			<!-- Header -->
+			<div class = "row">
+				<div class = "col-lg-12">
+					<div class="jumbotron jumbotron-fluid">
+						<div class="container">
+							<h1 class="display-3 text-center">Choo choo train</h1>
+							<p class="lead text-center">schedule of alll the trains</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- schedule -->
+			<div class = "row">
+				<div class = "col-lg-12">
+					<div class="panel panel-default">
+						<div class="panel-heading">Current Train Schedule</div>
+						<div class="panel-body">
+							<!-- table schedule -->
+							<table class="table">
+								<thead>
+									<tr>
+										<th>Train Name</th>
+										<th>Destination</th>
+										<th>Frequency</th>
+										<th>Next Arrival</th>
+										<th>Minutes Away</th>
+									</tr>
+									<tbody>
+									</tbody>
+								</thead>
+							</table>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Add the Train -->
+			<div class = "row">
+				<div class = "col-lg-12">
+					<div class="panel panel-default">
+						<div class="panel-heading">Current Train Schedule</div>
+						<div class="panel-body">
+							<form>
+								<div class="form-group">
+									<label for="input-train">Train Name</label>
+									<input class="form-control" id="input-train" type= "text">
+								</div>
+								<div class="form-group">
+									<label for="input-destination">Destination</label>
+									<input class="form-control" id="input-destination" type= "text">
+								</div>
+								<div class="form-group">
+									<label for="input-time">First Train Time (HH:mm- Military Time)</label>
+									<input class="form-control" id="input-time" type= "text">
+								</div>
+								<div class="form-group">
+									<label for="input-frequency">Frequency</label>
+									<input class="form-control" id="input-frequency" type= "text">
+								</div>
+								<button type="submit" class="btn btn-primary">Submit</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- The link to the javaQuery page -->
+	<script src="assets/javascript/page.js"></script>
+</body>
+</html>
