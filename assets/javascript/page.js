@@ -22,8 +22,24 @@ $(document).ready(function() {
   		var destinationName = $("#input-destination").val().trim();
   		var timeStart = $("#input-time").val().trim();
   		var frequency = $("#input-frequency").val().trim();
-  		var nextArrival = "";
-  		var minutes = "" ;
+
+
+      // time conversion
+      var firstTimeStart = moment(timeStart, 'hh:mm').subtract(1,"years");
+      console.log("firstTimeStart: " + firstTimeStart);
+
+      var diffTime = moment().diff(moment(firstTimeStart), "minutes");
+      console.log("diffTime: " + diffTime);
+
+      var tRemainder = diffTime % frequency;
+      console.log("tRemainder: " + tRemainder);
+
+      var minutes = frequency - tRemainder;
+      console.log("minutes: " + minutes);
+      var nextArrival = moment().add(minutes,"minutes");
+      console.log("nextArrival: " + nextArrival);
+      nextArrival = moment(nextArrival).format("hh:mm A");
+      console.log("nextArrival again: " + nextArrival);
 
   		database.ref().push({
   			trainName: trainName,
